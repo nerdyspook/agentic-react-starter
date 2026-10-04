@@ -6,7 +6,7 @@ None.
 
 ## Current milestone
 
-Complete the starter-harness audit fixes. Application features are out of scope.
+Strengthen the focused React guidance with rendering, immutability, Hooks, and Effect rules.
 
 ## Last verified commit
 
@@ -74,9 +74,18 @@ Not committed yet.
 
 ## Next action
 
-User reviews the harness fixes. After approval, the starter is ready for the
-timed practice exercise; complete the pending editor and responsive browser
-checks in the intended practice environment. Do not commit unless requested.
+Review the React guidance update. Keep the previously recorded editor and
+responsive browser checks pending. Do not commit unless requested.
+
+## React guidance follow-up — 2026-10-04
+
+- Added concise rules for pure rendering, immutable props/state, Hook placement,
+  and Effects with dependencies and cleanup in .agents/rules/react-typescript.md.
+- Scope: documentation only; no application code or configuration changed.
+- Verification: targeted Prettier formatting passed; pnpm run check passed
+  ESLint, all 3 Vitest tests, TypeScript checking, production build, and formatting.
+  Reviewed the complete diff; git diff --check passed.
+- Browser verification is not needed for this documentation-only change.
 
 ## Known limitations
 
