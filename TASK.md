@@ -6,11 +6,12 @@ None.
 
 ## Current milestone
 
-Strengthen the focused React guidance with rendering, immutability, Hooks, and Effect rules.
+Add the agreed reuse, design consistency, simplicity, feedback, and Git staging rules.
 
 ## Last verified commit
 
-Not committed yet.
+Baseline: aa1ca87 — docs: strengthen React development guidelines.
+The current rule additions are not committed.
 
 ## Progress
 
@@ -19,7 +20,8 @@ Not committed yet.
 - Completed: connected .codex/AGENTS.md from root instructions and made the memory path explicit.
 - Completed: initialized only the installed BMAD core-tools and method modules.
 - Completed: targeted formatting, full checks, and complete change-set review,
-  including untracked files. Awaiting user review; no commit created.
+  including untracked files during the harness audit. That milestone and the
+  React guidance follow-up have since been committed.
 
 ## Verification — 2026-10-04
 
@@ -74,8 +76,21 @@ Not committed yet.
 
 ## Next action
 
-Review the React guidance update. Keep the previously recorded editor and
-responsive browser checks pending. Do not commit unless requested.
+Review the added working rules and suggested commit message. Keep the previously
+recorded editor and responsive browser checks pending. Do not stage, unstage,
+or commit unless explicitly requested.
+
+## Working rules follow-up — 2026-10-04
+
+- Added pre-implementation feedback and explicit Git index preservation rules
+  to AGENTS.md.
+- Added reuse and design consistency guidance and refined the existing simplicity
+  rule in .agents/rules/react-typescript.md.
+- Scope: documentation only. Targeted Prettier formatting and pnpm run check
+  passed: ESLint, all 3 Vitest tests, TypeScript checking, production build,
+  and formatting. Reviewed the complete diff; git diff --check passed.
+- Git index remains unchanged; no files were staged, unstaged, or committed.
+- Browser verification is not needed for this documentation-only change.
 
 ## React guidance follow-up — 2026-10-04
 
@@ -94,6 +109,6 @@ responsive browser checks pending. Do not commit unless requested.
   raw.githubusercontent.com under network restrictions; this does not block setup.
 - BMAD critique/review workflows have not been executed end to end.
 - Vitest checks application logic only; UI verification remains manual.
-- The repository has no committed files yet. Review includes untracked files.
+- Current working-rule additions are uncommitted; earlier milestones are committed.
 - No application source, TypeScript settings, dependency versions, or lockfiles
   were changed by this milestone.

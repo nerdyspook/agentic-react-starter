@@ -24,6 +24,13 @@ At the start of each task, read .codex/AGENTS.md for additional working preferen
 6. Run checks, summarize the diff, and stop for my review.
 7. Commit only when requested.
 
+Before implementation, briefly explain material concerns, assumptions, and tradeoffs.
+Challenge proposals when there is a concrete reason, and suggest a practical alternative.
+Ask for clarification when a decision materially affects scope or behavior.
+
+Do not stage or unstage files unless I explicitly request it.
+Preserve any existing staged changes.
+
 ## Focused guidance
 
 Before changing React or TypeScript, read
