@@ -12,11 +12,18 @@ Vitest is the only automated testing library.
 - Full checks: pnpm run check
 - Formatting: pnpm run format
 
+## Working preferences
+
+- Explain meaningful decisions in plain language.
+- Prefer small changes that I can inspect and understand.
+- State assumptions that affect implementation.
+- Use the project's package manager; prefer pnpm for new projects.
+- Report which checks actually ran and their results.
+- When teaching, explain the reasoning behind the code.
+
 ## Workflow
 
-At the start of each task, read .codex/AGENTS.md for additional working preferences.
-
-1. Read TASK.md and the active OpenSpec change, when present.
+1. Read the active OpenSpec change, when present.
 2. Clarify requirements that materially affect the solution.
 3. Identify the current milestone and its acceptance criteria.
 4. Implement only the requested milestone.
@@ -44,7 +51,6 @@ Before changing UI, read .agents/rules/accessibility.md.
 
 OpenSpec is the sole planning workflow and owns requirements, design, and implementation tasks.
 Use the existing review-change skill when review is requested.
-TASK.md holds session progress, not a duplicate specification.
 
 Use subagents when requested or when an invoked skill requires them.
 Keep one writer per file.
@@ -64,14 +70,14 @@ Keep tool installations project-local unless I explicitly request otherwise.
 
 Before planning or implementation:
 
-- Read .agents/memory/decisions.md and TASK.md.
+- Read .agents/memory/decisions.md.
 - Read the relevant OpenSpec documents for the active change.
 - Check remembered facts against the current code and configuration.
 - Surface conflicts rather than silently relying on stale information.
 
 After completing a milestone:
 
-- Update TASK.md with progress, actual verification results, and next steps.
+- Report progress, actual verification results, and next steps in the response.
 - Update .agents/memory/decisions.md only when a consequential decision has been made.
 - Record its reason; distinguish proposed decisions from accepted ones.
 - Mark replaced decisions as superseded.
