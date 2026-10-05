@@ -4,11 +4,5 @@ coverage
 .vitest
 .venv
 pnpm-lock.yaml
-skills-lock.json
-_bmad
-_bmad-output
 openspec
 .agents/skills/openspec-*
-.agents/skills/bmad
-.agents/skills/bmad-*
-.agents/skills/bmod-*

@@ -42,8 +42,8 @@ Before changing UI, read .agents/rules/accessibility.md.
 
 ## Planning and review
 
-OpenSpec owns requirements, design decisions and implementation tasks.
-BMAD supplies requested critique or review.
+OpenSpec is the sole planning workflow and owns requirements, design, and implementation tasks.
+Use the existing review-change skill when review is requested.
 TASK.md holds session progress, not a duplicate specification.
 
 Use subagents when requested or when an invoked skill requires them.

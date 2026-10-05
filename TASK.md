@@ -2,113 +2,96 @@
 
 ## Active OpenSpec change
 
-None.
+None. No specs or changes exist; this milestone updates the starter harness and
+planning documentation only.
 
-## Current milestone
+## Current milestone — 2026-10-05
 
-Add the agreed reuse, design consistency, simplicity, feedback, and Git staging rules.
+Remove BMAD and make the existing OpenSpec setup the sole planning workflow.
 
-## Last verified commit
-
-Baseline: aa1ca87 — docs: strengthen React development guidelines.
-The current rule additions are not committed.
+Acceptance criteria: remove BMAD skills, runtime, lock entries, and obsolete
+exclusions; preserve OpenSpec and the retained local tools; add concise artifact
+rules; record the accepted decision; run the requested checks; review tracked and
+untracked changes without staging or committing.
 
 ## Progress
 
-- Completed: corrected Git exclusions and preserved generated/framework formatting exclusions.
-- Completed: recorded pnpm 11.23.0 in package.json.
-- Completed: connected .codex/AGENTS.md from root instructions and made the memory path explicit.
-- Completed: initialized only the installed BMAD core-tools and method modules.
-- Completed: targeted formatting, full checks, and complete change-set review,
-  including untracked files during the harness audit. That milestone and the
-  React guidance follow-up have since been committed.
+- Removed the five BMAD skill directories and _bmad/ runtime.
+- Reinspected _bmad-output/ immediately before removal: it was still empty, so no
+  user-created artifacts were removed.
+- Deleted skills-lock.json after confirming it contained only the five BMAD entries.
+- Removed BMAD exclusions and the deleted lockfile's exclusion from .prettierignore;
+  preserved OpenSpec and other generated-file exclusions.
+- Updated AGENTS.md to assign planning to OpenSpec and requested reviews to the
+  existing review-change skill, preserving milestone and Git workflow rules.
+- Kept schema: spec-driven and added concise proposal, specs, and tasks rules to
+  openspec/config.yaml. No custom schema or generated skill edits.
+- Recorded accepted decision D004 and its reason in .agents/memory/decisions.md.
+- Preserved all six openspec-* skills, .openspec-target, review-change,
+  test-behavior, safe-refactor, interview_reviewer.toml, project rules, and existing
+  memory entries. OpenSpec remains pinned to 1.14.0.
+- No application features, TypeScript settings, package versions, package lockfile,
+  or global configuration changes. No package installation or update.
 
-## Verification — 2026-10-04
+## Verification — 2026-10-05
 
-### Automated checks and command inspection
+### Automated checks and repository inspection
 
-- Prior audit: pnpm run check passed ESLint, all 3 Vitest tests, TypeScript checking,
-  production build, and Prettier checking. Tests execute the real isNonEmpty helper;
-  that helper is unused by the UI and does not verify rendered behavior.
-- Prior audit: pnpm exec openspec --version returned 1.14.0. OpenSpec doctor,
-  context, schema, and template inspection succeeded. No active changes or specs;
-  validation evaluated zero items, so no specification content was verified.
-- Prior audit: all 14 project skills were visible to the session and their metadata
-  was inspected. The configured interview_reviewer ran independently and reported
-  the missing pnpm version declaration; it did not execute checks or edit files.
-- Current milestone: uv --version returned 0.12.23. BMAD setup.py --status first
-  reported missing runtime; --list-config-questions returned [], so no answers
-  were needed. Setup without a mode flag exited 0 and created the runtime/config.
-- Current milestone: BMAD setup.py --status exited 0 with bmad_exists: true,
-  shared and module scripts current, current: true, next: null, and no pending
-  questions, unmet requirements, or problems. No optional skills, updates,
-  migrations, or global configuration changes were performed.
-- Current milestone: 21 Git ignore assertions passed using git check-ignore
-  --no-index: output/caches/secrets and BMAD personal overrides are ignored;
-  .env.example, editor settings/tasks, instructions, skills, memory, lockfiles,
-  and shared BMAD config/scripts are committable.
-- Current milestone: pnpm exec prettier --write AGENTS.md TASK.md package.json
-  .vscode/settings.json .vscode/tasks.json succeeded. Only settings.json needed
-  a final newline; editor behavior is unchanged.
-- Current milestone: pnpm run check exited 0: ESLint passed, all 3 Vitest tests
-  passed, TypeScript checking and Vite production build passed, and Prettier
-  checking passed. No redundant standalone lint/test/typecheck/build runs.
-- Current milestone: reviewed all Git-visible untracked paths and compared them
-  with baseline hashes. Six existing files changed: .gitignore, .prettierignore,
-  AGENTS.md, TASK.md, package.json, and .vscode/settings.json. Twenty-five shared
-  BMAD runtime files were created; all copied scripts/tests match installed
-  originals byte for byte. Source, TypeScript config, preferences, installed
-  skills, memory, and both lockfiles remain unchanged.
-
-### Browser inspection already performed during the audit
-
-- Vite started at http://127.0.0.1:5173 with explicit host/port arguments after
-  a sandbox-restricted attempt failed. Chrome rendered "Ready to build";
-  captured console warning/error logs were empty. Only the audit-started server
-  was stopped. This inspection was not repeated for the harness-only fixes.
+- Passed: pnpm exec prettier --write --ignore-path /dev/null AGENTS.md TASK.md
+  .agents/memory/decisions.md openspec/config.yaml. Explicit paths included the
+  maintained config while preserving the generated-file exclusions.
+- Passed: pnpm exec openspec doctor --json reported a healthy project root and
+  empty status lists.
+- Passed: pnpm exec openspec list --json returned an empty changes list.
+- pnpm exec openspec validate --all --strict --no-interactive exited 0 with
+  "No items found to validate." Validation evaluated zero items; no feature
+  requirements were verified.
+- Passed: pnpm run check completed ESLint, all 3 Vitest tests, TypeScript checking,
+  the Vite production build, and Prettier checking.
+- Passed: git diff --check. Reviewed the tracked changes: five maintained files
+  modified and 102 BMAD files deleted. No Git-visible untracked files exist.
+- Baseline hashes confirmed all 42 tracked files outside the authorized edits and
+  removals are unchanged, including retained skills, rules, reviewer configuration,
+  application source, TypeScript settings, package.json, and pnpm-lock.yaml.
+- No stale BMAD configuration references remain; remaining mentions document the
+  cleanup, accepted decision, or clearly labeled history.
+- The initial working tree and index were clean. The index still matches its
+  baseline exactly; no files were staged, unstaged, or committed.
+- Completed: the review-change skill's independent interview_reviewer reported
+  no actionable findings and independently passed git diff --check. The reviewer
+  inspected requirements and changes; broader check results above came from the
+  implementation session and were not rerun during review.
 
 ### Manual checks still pending
 
+No new browser checks are required for this harness/documentation-only milestone;
+application behavior is unchanged. The following checks remain from the prior audit:
+
 - Confirm VS Code's Prettier extension and workspace TypeScript selection;
   run the "Check project" task. Extension installation/authentication is unverified.
-- Start pnpm run dev and inspect a narrow viewport and 200% zoom. The current
-  page has no interactive controls requiring keyboard navigation.
+- Start pnpm run dev, open the printed local URL, and inspect the starter page at
+  a narrow viewport and 200% zoom. The current page has no interactive controls
+  requiring keyboard navigation.
 
-## Next action
+## Next steps
 
-Review the added working rules and suggested commit message. Keep the previously
-recorded editor and responsive browser checks pending. Do not stage, unstage,
-or commit unless explicitly requested.
+Milestone complete; awaiting user review. No blockers remain.
+Do not stage, unstage, or commit unless explicitly requested. Future planning uses
+OpenSpec; TASK.md records session progress rather than duplicating specifications.
 
-## Working rules follow-up — 2026-10-04
+## Retained history — 2026-10-04
 
-- Added pre-implementation feedback and explicit Git index preservation rules
-  to AGENTS.md.
-- Added reuse and design consistency guidance and refined the existing simplicity
-  rule in .agents/rules/react-typescript.md.
-- Scope: documentation only. Targeted Prettier formatting and pnpm run check
-  passed: ESLint, all 3 Vitest tests, TypeScript checking, production build,
-  and formatting. Reviewed the complete diff; git diff --check passed.
-- Git index remains unchanged; no files were staged, unstaged, or committed.
-- Browser verification is not needed for this documentation-only change.
+These are historical results, not verification of the current milestone:
 
-## React guidance follow-up — 2026-10-04
-
-- Added concise rules for pure rendering, immutable props/state, Hook placement,
-  and Effects with dependencies and cleanup in .agents/rules/react-typescript.md.
-- Scope: documentation only; no application code or configuration changed.
-- Verification: targeted Prettier formatting passed; pnpm run check passed
-  ESLint, all 3 Vitest tests, TypeScript checking, production build, and formatting.
-  Reviewed the complete diff; git diff --check passed.
-- Browser verification is not needed for this documentation-only change.
+- Earlier harness audits and React guidance follow-ups passed full checks,
+  including all 3 Vitest logic tests, TypeScript/build, lint, and formatting.
+- A prior browser audit rendered "Ready to build" with no captured console warnings
+  or errors. Responsive and editor checks listed above remained pending.
+- Earlier BMAD installation and readiness checks are superseded by this removal.
+- Existing reuse, design consistency, simplicity, React, feedback, and Git staging
+  rules remain in place.
 
 ## Known limitations
 
-- BMAD runtime readiness is verified against installed files. Upstream update
-  availability remains unverified because the status command cannot resolve
-  raw.githubusercontent.com under network restrictions; this does not block setup.
-- BMAD critique/review workflows have not been executed end to end.
 - Vitest checks application logic only; UI verification remains manual.
-- Current working-rule additions are uncommitted; earlier milestones are committed.
-- No application source, TypeScript settings, dependency versions, or lockfiles
-  were changed by this milestone.
+- With no OpenSpec specs or changes, validation cannot verify feature requirements.
