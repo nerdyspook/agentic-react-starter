@@ -1,0 +1,12 @@
+{
+  "id": "product-38",
+  "slug": "daily-notebook-dot",
+  "name": "Daily Notebook Dot",
+  "category": "stationery",
+  "images": ["/images/products/notebook.webp"],
+  "description": "Daily Notebook Dot, a simple everyday essential for your workspace. Demo variant shown with a shared reference image.",
+  "pricing": {
+    "amount": "9.00",
+    "currency": "USD"
+  }
+}

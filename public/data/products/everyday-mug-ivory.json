@@ -1,0 +1,12 @@
+{
+  "id": "product-33",
+  "slug": "everyday-mug-ivory",
+  "name": "Everyday Mug Ivory",
+  "category": "home",
+  "images": ["/images/products/mug.webp"],
+  "description": "Everyday Mug Ivory, a simple everyday essential for your home. Demo variant shown with a shared reference image.",
+  "pricing": {
+    "amount": "28.00",
+    "currency": "USD"
+  }
+}

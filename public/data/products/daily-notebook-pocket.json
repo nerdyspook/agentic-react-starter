@@ -1,0 +1,12 @@
+{
+  "id": "product-21",
+  "slug": "daily-notebook-pocket",
+  "name": "Daily Notebook Pocket",
+  "category": "stationery",
+  "images": ["/images/products/notebook.webp"],
+  "pricing": {
+    "amount": "8.50",
+    "currency": "USD"
+  },
+  "description": "A notebook for daily notes, sketches, and new ideas."
+}

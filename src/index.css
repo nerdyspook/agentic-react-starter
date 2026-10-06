@@ -1,15 +1,20 @@
-* {
-  box-sizing: border-box;
-}
+@import 'tailwindcss';
 
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-}
+@layer base {
+  body {
+    margin: 0;
+    min-width: 960px;
+    font-family: system-ui, sans-serif;
+    background: #faf9f6;
+    color: #1c3029;
+  }
 
-button,
-input,
-select,
-textarea {
-  font: inherit;
+  :focus-visible {
+    outline: 3px solid #b45309;
+    outline-offset: 4px;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
 }

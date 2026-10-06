@@ -1,0 +1,12 @@
+{
+  "id": "product-05",
+  "slug": "everyday-mug-tea",
+  "name": "Everyday Mug Tea",
+  "category": "home",
+  "images": ["/images/products/mug.webp"],
+  "pricing": {
+    "amount": "15.00",
+    "currency": "USD"
+  },
+  "description": "A simple ceramic mug for slow mornings and everyday rituals."
+}

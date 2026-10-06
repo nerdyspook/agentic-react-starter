@@ -1,0 +1,12 @@
+{
+  "id": "product-30",
+  "slug": "everyday-mug-fern",
+  "name": "Everyday Mug Fern",
+  "category": "home",
+  "images": ["/images/products/mug.webp"],
+  "description": "Everyday Mug Fern, a simple everyday essential for your home. Demo variant shown with a shared reference image.",
+  "pricing": {
+    "amount": "22.00",
+    "currency": "USD"
+  }
+}

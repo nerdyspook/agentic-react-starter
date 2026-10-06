@@ -1,0 +1,12 @@
+{
+  "id": "product-46",
+  "slug": "studio-stool-walnut",
+  "name": "Studio Stool Walnut",
+  "category": "home",
+  "images": ["/images/products/chair.webp"],
+  "description": "Studio Stool Walnut, a simple everyday essential for your home. Demo variant shown with a shared reference image.",
+  "pricing": {
+    "amount": "130.00",
+    "currency": "USD"
+  }
+}

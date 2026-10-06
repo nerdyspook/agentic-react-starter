@@ -1,0 +1,12 @@
+{
+  "id": "product-22",
+  "slug": "daily-notebook-a5",
+  "name": "Daily Notebook A5",
+  "category": "stationery",
+  "images": ["/images/products/notebook.webp"],
+  "pricing": {
+    "amount": "12.00",
+    "currency": "USD"
+  },
+  "description": "A notebook for daily notes, sketches, and new ideas."
+}

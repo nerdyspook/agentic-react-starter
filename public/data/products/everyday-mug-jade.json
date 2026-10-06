@@ -1,0 +1,12 @@
+{
+  "id": "product-34",
+  "slug": "everyday-mug-jade",
+  "name": "Everyday Mug Jade",
+  "category": "home",
+  "images": ["/images/products/mug.webp"],
+  "description": "Everyday Mug Jade, a simple everyday essential for your home. Demo variant shown with a shared reference image.",
+  "pricing": {
+    "amount": "30.00",
+    "currency": "USD"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "product-32",
+  "slug": "everyday-mug-honey",
+  "name": "Everyday Mug Honey",
+  "category": "home",
+  "images": ["/images/products/mug.webp"],
+  "description": "Everyday Mug Honey, a simple everyday essential for your home. Demo variant shown with a shared reference image.",
+  "pricing": {
+    "amount": "26.00",
+    "currency": "USD"
+  }
+}

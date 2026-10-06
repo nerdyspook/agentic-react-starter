@@ -1,0 +1,12 @@
+{
+  "id": "product-10",
+  "slug": "everyday-mug-tall",
+  "name": "Everyday Mug Tall",
+  "category": "home",
+  "images": ["/images/products/mug.webp"],
+  "pricing": {
+    "amount": "50.00",
+    "currency": "USD"
+  },
+  "description": "A simple ceramic mug for slow mornings and everyday rituals."
+}

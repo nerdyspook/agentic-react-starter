@@ -1,0 +1,12 @@
+{
+  "id": "product-19",
+  "slug": "studio-stool-five",
+  "name": "Studio Stool Five",
+  "category": "home",
+  "images": ["/images/products/chair.webp"],
+  "pricing": {
+    "amount": "200.00",
+    "currency": "USD"
+  },
+  "description": "A simple wooden stool for a quiet corner of your home."
+}

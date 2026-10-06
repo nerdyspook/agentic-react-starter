@@ -1,0 +1,12 @@
+{
+  "id": "product-18",
+  "slug": "studio-stool-four",
+  "name": "Studio Stool Four",
+  "category": "home",
+  "images": ["/images/products/chair.webp"],
+  "pricing": {
+    "amount": "175.00",
+    "currency": "USD"
+  },
+  "description": "A simple wooden stool for a quiet corner of your home."
+}

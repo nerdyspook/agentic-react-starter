@@ -1,0 +1,12 @@
+{
+  "id": "product-31",
+  "slug": "everyday-mug-glaze",
+  "name": "Everyday Mug Glaze",
+  "category": "home",
+  "images": ["/images/products/mug.webp"],
+  "description": "Everyday Mug Glaze, a simple everyday essential for your home. Demo variant shown with a shared reference image.",
+  "pricing": {
+    "amount": "24.00",
+    "currency": "USD"
+  }
+}

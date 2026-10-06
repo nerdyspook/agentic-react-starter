@@ -1,0 +1,12 @@
+{
+  "id": "product-12",
+  "slug": "everyday-mug-classic",
+  "name": "Everyday Mug Classic",
+  "category": "home",
+  "images": ["/images/products/mug.webp"],
+  "pricing": {
+    "amount": "18.00",
+    "currency": "USD"
+  },
+  "description": "A simple ceramic mug for slow mornings and everyday rituals."
+}
