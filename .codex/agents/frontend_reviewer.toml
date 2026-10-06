@@ -1,4 +1,4 @@
-name = "interview_reviewer"
+name = "frontend_reviewer"
 description = "Reviews a frontend milestone against its acceptance criteria."
 sandbox_mode = "read-only"
 

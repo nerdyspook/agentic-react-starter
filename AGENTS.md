@@ -38,14 +38,47 @@ Ask for clarification when a decision materially affects scope or behavior.
 Do not stage or unstage files unless I explicitly request it.
 Preserve any existing staged changes.
 
-## Focused guidance
+## React and TypeScript
 
-Before changing React or TypeScript, read
-.agents/rules/react-typescript.md.
+Apply when creating or modifying React or TypeScript code.
 
-Before writing tests, read .agents/rules/testing.md.
+- Before adding a function, hook, or component, search for existing code that meets the requirement. Reuse or extend it when appropriate.
+- Use understandable components and explicit props.
+- Follow the project's existing design system, shared components, and styling conventions. If none exists, keep new UI consistent with established patterns.
+- Keep rendering pure; perform side effects in event handlers or Effects, not during render.
+- Treat props and state as immutable; create new objects and arrays when updating them.
+- Call state and effect Hooks at the top level of React function components or custom Hooks, before early returns.
+- Keep state close to the component that owns it.
+- Derive values instead of storing duplicate state.
+- Use Effects to synchronize with external systems; calculate derived values during render and handle user actions in event handlers.
+- Include every reactive Effect dependency and clean up subscriptions, timers, or other resources when needed.
+- Use functional state updates when the next value depends on the old one.
+- Avoid any; narrow unknown external values before using them.
+- Keep business calculations in functions that the UI actually calls.
+- Prefer focused functions with clear names and straightforward control flow. Introduce abstractions only when they simplify the current requirements.
 
-Before changing UI, read .agents/rules/accessibility.md.
+## Testing
+
+Apply when creating or modifying tests.
+
+- Use Vitest and explicit imports from vitest.
+- Test observable behaviour of application logic.
+- Include relevant normal, boundary and invalid-input cases.
+- Calculate expected answers independently of the implementation.
+- For bug fixes, demonstrate a failing regression test before fixing.
+- Start with simple test and expect statements.
+- Explain each test's input, expected result and the bug it would catch.
+- Record UI checks separately; logic tests do not verify rendered behaviour.
+
+## Accessibility and UI checks
+
+Apply when creating or modifying user interfaces.
+
+- Use semantic buttons, links, headings and form elements.
+- Give form controls visible labels.
+- Preserve visible keyboard focus.
+- Make loading, empty, error and success states understandable.
+- Check keyboard navigation and a narrow viewport in the browser.
 
 ## Planning and review
 

@@ -3,7 +3,7 @@ name: test-behavior
 description: Write or improve Vitest tests for TypeScript application logic.
 ---
 
-1. Read the requirements and .agents/rules/testing.md.
+1. Read the requirements and the Testing section of root AGENTS.md.
 2. Identify the application function and behaviour under test.
 3. List the important cases before writing tests.
 4. Add focused Vitest tests with independently determined expectations.

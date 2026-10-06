@@ -2,7 +2,7 @@ import { expect, test } from 'vitest'
 import { isNonEmpty } from './isNonEmpty'
 
 test('accepts text', () => {
-  expect(isNonEmpty('Susanto')).toBe(true)
+  expect(isNonEmpty('hello')).toBe(true)
 })
 
 test('rejects an empty string', () => {
